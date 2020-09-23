@@ -1,0 +1,15 @@
+.list-group {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+button.list-group-item {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 150px;
+  border-radius: 5px;
+  text-align: center;
+}

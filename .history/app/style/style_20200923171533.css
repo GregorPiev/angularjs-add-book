@@ -1,0 +1,11 @@
+.list-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.itemInList {
+  background-color: aqua;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50px;
+}

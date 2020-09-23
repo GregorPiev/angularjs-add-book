@@ -1,0 +1,222 @@
+<h3>{{ title }}</h3>
+
+<form name="myForm" class="form-horizontal" role="form">
+	<fieldset>
+		<div class="form-group">
+			<label for="title" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Book title</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<input
+					type="text"
+					ng-model="title"
+					class="form-control"
+					id="title"
+					name="title"
+					value=""
+					placeholder="Book title"
+					required
+					pattern="[A-Za-z '-]{3,20}"
+					maxlength="20"
+					title="From 3 to 20 characters"
+				/>
+				<i ng-show="myForm.title.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="author" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Author</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<input
+					type="text"
+					ng-model="author"
+					class="form-control"
+					id="author"
+					name="author"
+					value=""
+					placeholder="Author"
+					required
+					pattern="[A-Za-z '-]{3,20}"
+					maxlength="20"
+					title="From 3 to 20 characters"
+				/>
+				<i ng-show="myForm.author.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="isbn" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>ISBN</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<input
+					type="text"
+					ng-model="isbn"
+					class="form-control"
+					id="isbn"
+					name="isbn"
+					value=""
+					placeholder="ISBN"
+					required
+					pattern="[A-Za-z '-]{3,20}"
+					maxlength="20"
+					title="From 3 to 20 characters"
+				/>
+				<i ng-show="myForm.isbn.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="publisher" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Publisher</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<input
+					type="text"
+					ng-model="publisher"
+					class="form-control"
+					id="publisher"
+					name="publisher"
+					value=""
+					placeholder="Publisher"
+					required
+					pattern="[A-Za-z '-]{3,20}"
+					maxlength="20"
+					title="From 3 to 20 characters"
+				/>
+				<i ng-show="myForm.publisher.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="date" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Data published</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<input
+					type="date"
+					ng-model="date"
+					class="form-control"
+					id="date"
+					name="date"
+					value=""
+					placeholder="DD/MM/YYYY"
+					required
+				/>
+				<i ng-show="myForm.date.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="pages" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Number of pages</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<input
+					type="number"
+					ng-model="pages"
+					class="form-control"
+					id="pages"
+					name="pages"
+					value=""
+					placeholder="Number of pages"
+					required
+				/>
+				<i ng-show="myForm.pages.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="format" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Format</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<input
+					type="text"
+					ng-model="format"
+					class="form-control"
+					id="format"
+					name="format"
+					value=""
+					placeholder="Format"
+					required
+				/>
+				<i ng-show="myForm.format.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="edition" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Edition</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<input
+					type="text"
+					ng-model="edition"
+					class="form-control"
+					id="edition"
+					name="edition"
+					value=""
+					placeholder="Format"
+					required
+				/>
+				<i ng-show="myForm.edition.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="language" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Edition language</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<input
+					type="text"
+					ng-model="language"
+					class="form-control"
+					id="language"
+					name="language"
+					value=""
+					placeholder="Format"
+					required
+				/>
+				<i ng-show="myForm.language.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="description" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Description</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<textarea
+					ng-model="client.description"
+					id="description"
+					name="description"
+					class="form-control"
+					required
+					placeholder="Type the description"
+					pattern="[A-Za-z '-]{3,200}"
+					title="From 3 to 200 characters"
+					maxlength="200"
+				></textarea>
+				<i ng-show="myForm.description.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div
+				class="col-lg-offset-10 col-md-offset-10 col-sm-offset-10 col-lg-2 col-md-2 col-sm-2 col-xs-12"
+			>
+				<button
+					ng-disabled="!myForm.$valid"
+					class="btn btn-default"
+					ng-click="sendVal(picFile);"
+				>
+					Submit
+				</button>
+			</div>
+		</div>
+	</fieldset>
+</form>

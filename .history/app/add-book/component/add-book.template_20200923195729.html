@@ -1,0 +1,77 @@
+<h3>{{ title }}</h3>
+
+<form name="myForm" class="form-horizontal" role="form">
+	<fieldset>
+		<div class="form-group">
+			<label for="title" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Book title</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<input
+					type="text"
+					ng-model="title"
+					class="form-control"
+					id="title"
+					name="title"
+					value=""
+					placeholder="Book title"
+					required
+					pattern="[A-Za-z '-]{3,20}"
+					maxlength="20"
+					title="From 3 to 20 characters"
+				/>
+				<i ng-show="myForm.fname.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="description" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Description</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<textarea
+					ng-model="client.description"
+					id="description"
+					name="description"
+					class="form-control"
+					required
+					placeholder="Type the description"
+					pattern="[A-Za-z '-]{3,200}"
+					title="From 3 to 200 characters"
+					maxlength="200"
+				></textarea>
+				<i ng-show="myForm.description.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div
+				class="col-lg-offset-10 col-md-offset-10 col-sm-offset-10 col-lg-2 col-md-2 col-sm-2 col-xs-12"
+			>
+				<button
+					ng-disabled="!myForm.$valid"
+					class="btn btn-default"
+					ng-click="sendVal(picFile);"
+				>
+					Submit
+				</button>
+			</div>
+		</div>
+		<div class="form-group">
+			<div
+				class="progress col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-10 col-xs-offset-1"
+			>
+				<span class="progress" ng-show="picFile.progress >= 0">
+					<div
+						style="width:{{picFile.progress}}%"
+						ng-bind="picFile.progress + '%'"
+					></div>
+				</span>
+				<br />
+				<span ng-show="picFile.result">Upload Successful</span>
+				<br />
+				<span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+			</div>
+		</div>
+	</fieldset>
+</form>

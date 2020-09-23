@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="addBook">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Add Book - Test AngularJS</title>
+		<base href="/" />
+		<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+	</head>
+	<body>
+		<div class="container-fluid" style="border: solid 1px red">
+			<div class="row">
+				<div
+					class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-lg-10 col-lg-offset-1"
+				>
+					<main></main>
+				</div>
+			</div>
+		</div>
+
+		<!-- <subgenre></subgenre>
+		<add-subgenre></add-subgenre>
+		<add-book-item></add-book-item> -->
+
+		<script src="node_modules/angular/angular.min.js"></script>
+		<script src="node_modules/angular-route/angular-route.min.js"></script>
+		<script src="node_modules/angular-resource/angular-resource.min.js"></script>
+
+		<script src="app/app.module.js"></script>
+		<script src="app/app.config.js"></script>
+
+		<script src="app/main/main.module.js"></script>
+		<script src="app/main/main.component.js"></script>
+		<script src="app/main/component/main.controller.js"></script>
+
+		<script src="app/genre/genre.module.js"></script>
+		<script src="app/genre/genre.component.js"></script>
+		<script src="app/genre/component/genre.controller.js"></script>
+
+		<script src="app/subgenre/subgenre.module.js"></script>
+		<script src="app/subgenre/subgenre.component.js"></script>
+		<script src="app/subgenre/component/subgenre.controller.js"></script>
+
+		<script src="app/add-subgenre/add-subgenre.module.js"></script>
+		<script src="app/add-subgenre/add-subgenre.component.js"></script>
+		<script src="app/add-subgenre/component/add-subgenre.controller.js"></script>
+
+		<script src="app/add-book/add-book.module.js"></script>
+		<script src="app/add-book/add-book.component.js"></script>
+		<script src="app/add-book/component/add-book.controller.js"></script>
+
+		<script src="app/service/service.module.js"></script>
+		<script src="app/service/service.service.js"></script>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<h3>{{ title }}</h3>
+<form name="myForm" class="form-horizontal" role="form">
+	<fieldset>
+		<div class="form-group">
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 text-left">
+				<input
+					type="text"
+					ng-model="name"
+					class="form-control"
+					id="name"
+					name="name"
+					value=""
+					placeholder="Subgenre name"
+					required
+					pattern="[A-Za-z '-]{3,20}"
+					maxlength="20"
+					title="From 3 to 20 characters"
+				/>
+				<i ng-show="myForm.name.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<label>
+					<input
+						type="checkbox"
+						ng-model="isDescriptionRequired"
+						class="form-control"
+						id="isDescriptionRequired"
+						name="isDescriptionRequired"
+						value=""
+					/>&nbsp; Description is required for this subgenre
+				</label>
+
+				<i ng-show="myForm.name.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div
+				class="col-lg-offset-10 col-md-offset-10 col-sm-offset-10 col-lg-2 col-md-2 col-sm-2 col-xs-12"
+			>
+				<button
+					ng-disabled="!myForm.$valid"
+					class="btn btn-default"
+					ng-click="sendVal();"
+				>
+					Submit
+				</button>
+			</div>
+		</div>
+	</fieldset>
+</form>

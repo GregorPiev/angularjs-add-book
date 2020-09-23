@@ -1,0 +1,5 @@
+<h3>{{ title }}</h3>
+{{ genreList | json }}
+<ul>
+	<li ng-repeat="genre in genreList">{{ genre.name }}</li>
+</ul>

@@ -1,0 +1,36 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 text-center">{{ title }}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 text-center block-step">
+			<div class="step">
+				<div class="step-number">1</div>
+				Genre
+			</div>
+			<div class="step">
+				<div class="step-number">2</div>
+				Subgenre
+			</div>
+
+			<div class="step">
+				<div class="step-number">...</div>
+				Subgenre
+			</div>
+
+			<div class="step">
+				<div class="step-number">3</div>
+				Add new subgenre
+			</div>
+
+			<div class="step">
+				<div class="step-number">4</div>
+				Information
+			</div>
+		</div>
+
+		<div class="col-md-10 col-md-offset-1 text-center">
+			<div ng-view></div>
+		</div>
+	</div>
+</div>

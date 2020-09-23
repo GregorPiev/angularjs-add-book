@@ -1,0 +1,12 @@
+.list-group {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+button.list-group-item {
+  background-color: aqua;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 150px;
+}

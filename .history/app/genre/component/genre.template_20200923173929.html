@@ -1,0 +1,16 @@
+<div class="list-group">
+	<button
+		type="button"
+		class="list-group-item itemInList"
+		ng-repeat="genre in genreList"
+		ng-click="chooseGenre(genre.id)"
+		ng-class="{'choosed': choosedId==genre.id}"
+	>
+		{{ genre.name }}
+	</button>
+</div>
+<div class="button-row">
+	<button class="btn btn-sm btn-default" disabled><&nbsp;Back</button>
+
+	<button class="btn btn-sm btn-primary"> Back&nbsp;></button></button>
+</div>

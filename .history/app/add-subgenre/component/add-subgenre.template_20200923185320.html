@@ -1,0 +1,141 @@
+<h3>{{ title }}</h3>
+<form name="myForm" class="form-horizontal" role="form">
+	<fieldset>
+		<div class="form-group">
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<input
+					type="text"
+					ng-model="name"
+					class="form-control"
+					id="name"
+					name="name"
+					value=""
+					placeholder="Subgenre name"
+					required
+					pattern="[A-Za-z '-]{3,20}"
+					maxlength="20"
+					title="From 3 to 20 characters"
+				/>
+				<i ng-show="myForm.name.$error.required">*required</i>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="short" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Short Description</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<textarea
+					ng-model="client.short"
+					id="short"
+					name="short"
+					class="form-control"
+					required
+					placeholder="Enter Short Description"
+					pattern="[A-Za-z '-]{3,20}"
+					title="From 3 to 20 characters"
+					maxlength="20"
+				></textarea>
+				<i ng-show="myForm.short.$error.required">*required</i>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="description" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Full Description</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<textarea
+					ng-model="client.description"
+					id="description"
+					name="description"
+					class="form-control"
+					required
+					placeholder="Enter Full Description"
+					pattern="[A-Za-z '-]{3,200}"
+					title="From 3 to 200 characters"
+					maxlength="200"
+				></textarea>
+				<i ng-show="myForm.description.$error.required">*required</i>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="email" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Email</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<input
+					type="email"
+					ng-model="client.email"
+					id="email"
+					name="email"
+					value=""
+					class="form-control"
+					required
+					placeholder="Enter email"
+					title="Enter valid email"
+					pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+				/>
+				<i ng-show="myForm.email.$error.required">*required</i>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="picFile" class="col-lg-3 col-md-3 col-sm-3 col-xs-12"
+				>Choose Picture</label
+			>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+				<input
+					type="file"
+					ngf-select
+					ng-model="picFile"
+					id="picFile"
+					name="file"
+					accept="image/*"
+					ngf-max-size="2MB"
+					required
+					ngf-model-invalid="errorFile"
+				/>
+				<i ng-show="myForm.file.$error.required">*required</i><br />
+				<i ng-show="myForm.file.$error.maxSize"
+					>File too large {{errorFile.size / 1000000|number:1}}MB: max 2M</i
+				>
+				<img
+					ng-show="myForm.file.$valid"
+					ngf-thumbnail="picFile"
+					class="thumb"
+				/>
+				<button ng-click="picFile = null" ng-show="picFile">Remove</button>
+				<br />
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div
+				class="col-lg-offset-10 col-md-offset-10 col-sm-offset-10 col-lg-2 col-md-2 col-sm-2 col-xs-12"
+			>
+				<button
+					ng-disabled="!myForm.$valid"
+					class="btn btn-default"
+					ng-click="sendVal(picFile);"
+				>
+					Submit
+				</button>
+			</div>
+		</div>
+		<div class="form-group">
+			<div
+				class="progress col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-10 col-xs-offset-1"
+			>
+				<span class="progress" ng-show="picFile.progress >= 0">
+					<div
+						style="width:{{picFile.progress}}%"
+						ng-bind="picFile.progress + '%'"
+					></div>
+				</span>
+				<br />
+				<span ng-show="picFile.result">Upload Successful</span>
+				<br />
+				<span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+			</div>
+		</div>
+	</fieldset>
+</form>

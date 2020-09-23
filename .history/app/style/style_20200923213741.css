@@ -1,0 +1,60 @@
+.list-group {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+button.list-group-item {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 150px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 15px;
+}
+button.list-group-item.choosed {
+  background-color: black;
+  color: white;
+}
+.button-row {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px 10px 5px 0;
+  text-align: right;
+}
+input[type='checkbox'] {
+  width: 34px;
+  margin-right: 0;
+  padding-right: 0;
+  display: inline-block;
+}
+label.check {
+  width: 100%;
+  display: inline;
+}
+.success {
+  width: 360px;
+  height: 360px;
+  line-height: 90px;
+  text-align: center;
+  margin: 30px auto;
+}
+.success-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.block-step {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.step {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: solid 1px black;
+}

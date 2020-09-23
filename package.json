@@ -1,0 +1,25 @@
+{
+  "name": "addbookanjs",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GregorPiev/AddBookAnJS.git"
+  },
+  "author": "Gregory P.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GregorPiev/AddBookAnJS/issues"
+  },
+  "homepage": "https://github.com/GregorPiev/AddBookAnJS#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "bootstrap": "^3.4.1"
+  }
+}

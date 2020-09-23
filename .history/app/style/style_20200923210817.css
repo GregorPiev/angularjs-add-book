@@ -1,0 +1,45 @@
+.list-group {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+button.list-group-item {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 150px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 15px;
+}
+button.list-group-item.choosed {
+  background-color: black;
+  color: white;
+}
+.button-row {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px 10px 5px 0;
+  text-align: right;
+}
+input[type='checkbox'] {
+  width: 34px;
+  margin-right: 0;
+  padding-right: 0;
+  display: inline-block;
+}
+label.check {
+  width: 100%;
+  display: inline;
+}
+.success {
+  width: 150px;
+  height: 150px;
+  line-height: 150;
+  border-radius: 75px;
+  text-align: center;
+  margin: 30px 0;
+  background-color: gray;
+}
