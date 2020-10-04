@@ -62,18 +62,40 @@ angular.module('addBookItem')
                     genreObject['subgenres'][index]['books'].push(newItem)
 
                     console.log('New genreObject:', genreObject)
-                    AddBook.update({ id: $scope.idGenre }, genreObject).$promise
+
+                    /* genreObject['subgenres'].push(newItem);
+                    console.log('genreObject After Add:', genreObject);
+                    AddSubgenre.update({ id: $scope.idGenre }, genreObject).$promise
                         .then(function (result) {
                             console.log('Result:', result)
-                            $location.path(`/success`);
-                        });
-
+                            $location.path(`/add-book/${$scope.idGenre}/${$scope.index}`);
+                        }); */
                 });
+
+
+
+            /* $scope.entry = Service.query({ id: id }, function () {
+                $scope.entry.data = {
+                    title: $scope.title,
+                    author: $scope.author,
+                    isbn: $scope.isbn,
+                    publisher: $scope.publisher,
+                    date: $scope.date,
+                    pages: $scope.pages,
+                    format: $scope.format,
+                    edition: $scope.edition,
+                    language: $scope.language,
+                    description: $scope.description
+                };
+                $scope.entry.$update(function () {
+                    //updated in the backend
+                }); */
+            // $location.path(`/success`);
         };
 
 
 
         $scope.moveBack = function () {
-            $location.path(`/add-subgenre/${$scope.idGenre}`);
+            $location.path(`/add-subgenre/${id}`);
         }
     });

@@ -7,8 +7,8 @@ angular.module('genre')
         GetGenre.get().$promise
             .then(function (data) {
                 angular.forEach(data, function (item, index) {
-                    // console.log('Genre item:', item)
-                    // console.log('Genre index:', index)
+                    console.log('Genre item:', item)
+                    console.log('Genre index:', index)
                     var genreItem = {
                         id: index,
                         name: item.name

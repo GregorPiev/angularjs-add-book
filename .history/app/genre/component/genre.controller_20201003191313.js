@@ -1,14 +1,14 @@
 angular.module('genre')
     .controller('genreController', function ($scope, GetGenre, $location) {
         $scope.genreList = [];
-        $scope.choosedId = -1;
+        $scope.choosedId = 0;
         $scope.$emit("step", 1);
 
         GetGenre.get().$promise
             .then(function (data) {
                 angular.forEach(data, function (item, index) {
-                    // console.log('Genre item:', item)
-                    // console.log('Genre index:', index)
+                    console.log('Genre item:', item)
+                    console.log('Genre index:', index)
                     var genreItem = {
                         id: index,
                         name: item.name

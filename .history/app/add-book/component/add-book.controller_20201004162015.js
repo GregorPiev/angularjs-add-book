@@ -23,6 +23,11 @@ angular.module('addBookItem')
                 .then(function (genreObject) {
                     console.log('genreObject:', genreObject);
 
+                    var subgenreItem = genreObject['subgenres'].filter(function (item) {
+                        console.log('Id subgenre:', item.id);
+                        return +$scope.idSubGenre === item.id;
+                    })
+
                     var index = genreObject['subgenres'].findIndex(function (item) {
                         return +$scope.idSubGenre === item.id;
                     })
@@ -30,15 +35,14 @@ angular.module('addBookItem')
                     console.log('Index:', index);
                     console.log('genreObject by Index', genreObject['subgenres'][index]);
 
-
-                    if (genreObject['subgenres'][index]['books']) {
+                    console.log('subgenreItem:', subgenreItem);
+                    if (subgenreItem['books']) {
                         console.log('Exist book array')
-                        item = genreObject['subgenres'][index]['books'][subgenreItem['books'].length - 1].id;
-                        console.log('Book Item', item)
-                        idBook = ++item.id
+                        item = subgenreItem['books'][subgenreItem['books'].length - 1].id;
+                        idBook
                     } else {
                         console.log('Not Exist book array')
-                        genreObject['subgenres'][index]['books'] = [];
+                        subgenreItem['books'] = [];
                         idBook = 1;
                     }
 
@@ -59,21 +63,45 @@ angular.module('addBookItem')
                     }
                     console.log('newItem:', newItem);
 
-                    genreObject['subgenres'][index]['books'].push(newItem)
+                    subgenreItem['books'].push(newItem)
 
-                    console.log('New genreObject:', genreObject)
-                    AddBook.update({ id: $scope.idGenre }, genreObject).$promise
+                    angular.forEach(genreObject['subgenres'], function (item, index) {
+
+                    })
+
+                    /* genreObject['subgenres'].push(newItem);
+                    console.log('genreObject After Add:', genreObject);
+                    AddSubgenre.update({ id: $scope.idGenre }, genreObject).$promise
                         .then(function (result) {
                             console.log('Result:', result)
-                            $location.path(`/success`);
-                        });
-
+                            $location.path(`/add-book/${$scope.idGenre}/${$scope.index}`);
+                        }); */
                 });
+
+
+
+            /* $scope.entry = Service.query({ id: id }, function () {
+                $scope.entry.data = {
+                    title: $scope.title,
+                    author: $scope.author,
+                    isbn: $scope.isbn,
+                    publisher: $scope.publisher,
+                    date: $scope.date,
+                    pages: $scope.pages,
+                    format: $scope.format,
+                    edition: $scope.edition,
+                    language: $scope.language,
+                    description: $scope.description
+                };
+                $scope.entry.$update(function () {
+                    //updated in the backend
+                }); */
+            // $location.path(`/success`);
         };
 
 
 
         $scope.moveBack = function () {
-            $location.path(`/add-subgenre/${$scope.idGenre}`);
+            $location.path(`/add-subgenre/${id}`);
         }
     });

@@ -42,7 +42,7 @@ angular.module('service')
     })
     .factory('AddSubgenre', function ($resource) {
         var url = 'https://angularjs-addbook.firebaseio.com/genres/:id.json';
-        return $resource(url, { id: '@idGenre' },
+        return $resource(url, { id: '@id' },
             {
                 get: {
                     method: "GET",
@@ -51,25 +51,7 @@ angular.module('service')
 
                 },
                 update: {
-                    method: "PATCH",
-                    params: { id: "@idGenre" }
-                }
-            });
-
-    })
-    .factory('AddBook', function ($resource) {
-        var url = 'https://angularjs-addbook.firebaseio.com/genres/:id.json';
-        return $resource(url, { id: '@idGenre' },
-            {
-                get: {
-                    method: "GET",
-                    isArray: false,
-                    cache: false
-
-                },
-                update: {
-                    method: "PATCH",
-                    params: { id: "@idGenre" }
+                    method: "PUT"
                 }
             });
 

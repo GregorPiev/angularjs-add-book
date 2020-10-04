@@ -65,7 +65,7 @@ angular.module('addBookItem')
                     AddBook.update({ id: $scope.idGenre }, genreObject).$promise
                         .then(function (result) {
                             console.log('Result:', result)
-                            $location.path(`/success`);
+                            // $location.path(`/success`);
                         });
 
                 });

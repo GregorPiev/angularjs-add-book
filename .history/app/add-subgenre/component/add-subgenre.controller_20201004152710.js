@@ -5,7 +5,7 @@ angular.module('addSubgenre')
         $scope.$emit("step", 3);
 
         $scope.name = '';
-        $scope.index = -1;
+        $scope.index = 0;
         $scope.id = 0;
         $scope.subgenres = [];
         $scope.isDescriptionRequired = false;
@@ -18,10 +18,9 @@ angular.module('addSubgenre')
             AddSubgenre.get({ id: $scope.idGenre }).$promise
                 .then(function (genreObject) {
                     console.log('genreObject:', genreObject);
-                    angular.forEach(genreObject['subgenres'], function (item, index) {
+                    angular.forEach(genreObject['subgenres'], function (item) {
                         console.log('Add Subgenre item:', item)
                         $scope.id = item.id;
-                        $scope.index = ++index;
                     })
 
                     var newItem = {
@@ -36,7 +35,7 @@ angular.module('addSubgenre')
                     AddSubgenre.update({ id: $scope.idGenre }, genreObject).$promise
                         .then(function (result) {
                             console.log('Result:', result)
-                            $location.path(`/add-book/${$scope.idGenre}/${$scope.id}`);
+                            // $location.path(`/add-book/${$scope.idGenre}/1`);
                         });
                 });
 

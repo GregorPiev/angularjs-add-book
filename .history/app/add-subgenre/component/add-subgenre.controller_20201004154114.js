@@ -36,7 +36,7 @@ angular.module('addSubgenre')
                     AddSubgenre.update({ id: $scope.idGenre }, genreObject).$promise
                         .then(function (result) {
                             console.log('Result:', result)
-                            $location.path(`/add-book/${$scope.idGenre}/${$scope.id}`);
+                            $location.path(`/add-book/${$scope.idGenre}/${$scope.index}`);
                         });
                 });
 

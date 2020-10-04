@@ -62,18 +62,19 @@ angular.module('addBookItem')
                     genreObject['subgenres'][index]['books'].push(newItem)
 
                     console.log('New genreObject:', genreObject)
-                    AddBook.update({ id: $scope.idGenre }, genreObject).$promise
-                        .then(function (result) {
-                            console.log('Result:', result)
-                            $location.path(`/success`);
-                        });
+
 
                 });
+
+
+
+
+            // $location.path(`/success`);
         };
 
 
 
         $scope.moveBack = function () {
-            $location.path(`/add-subgenre/${$scope.idGenre}`);
+            $location.path(`/add-subgenre/${id}`);
         }
     });
