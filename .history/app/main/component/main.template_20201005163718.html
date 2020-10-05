@@ -1,0 +1,83 @@
+<div class="container-fluid">
+	<div class="row">
+		<div
+			class="col-md-10 col-md-offset-1 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10 text-left"
+		>
+			<h1 class="main-title">Add book - New book</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 text-center block-step">
+			<div class="line" ng-class="{'step-display': step==5}"></div>
+			<div class="step" ng-class="{'step-display': step==5}">
+				<div class="step-number" ng-class="{'step-choosed': step==1}">1</div>
+				Genre
+			</div>
+
+			<div class="step" ng-class="{'step-display': step!=11}">
+				<div class="step-number" ng-class="{'step-choosed': step==11}">11</div>
+				Edit Genre
+			</div>
+
+			<div class="step" ng-class="{'step-display': step!=10}">
+				<div class="step-number" ng-class="{'step-choosed': step==10}">10</div>
+				Add Genre
+			</div>
+
+			<div class="step" ng-class="{'step-display': step==5}">
+				<div class="step-number" ng-class="{'step-choosed': step==2}">2</div>
+				Subgenre
+			</div>
+
+			<div class="step" ng-class="{'step-display': step!=8}">
+				<div class="step-number" ng-class="{'step-choosed': step==8}">8</div>
+				Edit Subgenre
+			</div>
+
+			<div class="step" ng-class="{'step-display': step!=6 && step!=9}">
+				<div class="step-number" ng-class="{'step-choosed': step==6}">6</div>
+				Book List
+			</div>
+
+			<div
+				class="step"
+				ng-class="{'step-display': step!=7 && step!=6 && step!=9}"
+			>
+				<div class="step-number" ng-class="{'step-choosed': step==7}">7</div>
+				Edit Book
+			</div>
+
+			<div class="step" ng-class="{'step-display': step!=9}">
+				<div class="step-number" ng-class="{'step-choosed': step==9}">9</div>
+				Add Book
+			</div>
+
+			<div
+				class="step"
+				ng-class="{'step-display': step==5 || step==3 || step==4 || step==6 || step==7 || step==8 || step==9}"
+			>
+				<div class="step-number">...</div>
+			</div>
+
+			<div
+				class="step"
+				ng-class="{'step-display': step==5 || step==1 || step==2 || step==6 || step==7 || step==8 || step==9}"
+			>
+				<div class="step-number" ng-class="{'step-choosed': step==3}">3</div>
+				Add new subgenre
+			</div>
+
+			<div
+				class="step"
+				ng-class="{'step-display': step==5 || step==1 || step==2 || step==6 || step==7 || step==8 || step==9}"
+			>
+				<div class="step-number" ng-class="{'step-choosed': step==4}">4</div>
+				Information
+			</div>
+		</div>
+
+		<div class="col-md-10 col-md-offset-1 text-center">
+			<div ng-view></div>
+		</div>
+	</div>
+</div>

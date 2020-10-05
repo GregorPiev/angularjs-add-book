@@ -1,0 +1,41 @@
+<div class="list-group">
+	<button
+		type="button"
+		class="list-group-item itemInList"
+		ng-repeat="genre in genreList"
+		ng-click="chooseGenre(genre.id)"
+		ng-class="{'choosed': choosedId==genre.id}"
+	>
+		{{ genre.name }}
+	</button>
+
+	<button
+		type="button"
+		class="list-group-item itemInList"
+		ng-click="chooseGenre(-1)"
+		ng-class="{'choosed': choosedId==-1}"
+	>
+		Add new
+	</button>
+</div>
+<div class="button-row">
+	<button class="btn btn-sm btn-default" ng-click="moveBack()">
+		<&nbsp;Back
+	</button>
+
+	<button
+		class="btn btn-sm btn-primary"
+		ng-class="{'disabled': choosedId==0}"
+		ng-click="getBooksList()"
+	>
+		Books List&nbsp;>
+	</button>
+
+	<!-- <button
+		class="btn btn-sm btn-primary"
+		ng-click="moveFroward()"
+		ng-class="{'disabled': choosedId==0}"
+	>
+		Next&nbsp;>
+	</button> -->
+</div>

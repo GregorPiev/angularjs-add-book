@@ -1,0 +1,113 @@
+{
+  "genres" : [ {
+    "id" : 1,
+    "name" : "Genre 1",
+    "subgenres" : [ {
+      "id" : 10,
+      "isDescriptionRequired" : true,
+      "name" : "Subgenre 1"
+    }, {
+      "id" : 11,
+      "isDescriptionRequired" : false,
+      "name" : "Subgenre 2"
+    }, {
+      "id" : 12,
+      "isDescriptionRequired" : true,
+      "name" : "Subgenre 3"
+    }, {
+      "id" : 13,
+      "isDescriptionRequired" : true,
+      "name" : "Subgenre 4"
+    }, {
+      "id" : 14,
+      "isDescriptionRequired" : true,
+      "name" : "Subgenre 5"
+    } ]
+  }, {
+    "id" : 3,
+    "name" : "Genre 3",
+    "subgenres" : [ {
+      "id" : 18,
+      "isDescriptionRequired" : true,
+      "name" : "Subgenre 1"
+    }, {
+      "id" : 19,
+      "isDescriptionRequired" : true,
+      "name" : "Subgenre 2"
+    }, {
+      "id" : 20,
+      "isDescriptionRequired" : true,
+      "name" : "Subgenre 3"
+    } ]
+  }, {
+    "id" : 4,
+    "name" : "Genre 4",
+    "subgenres" : [ {
+      "id" : 21,
+      "isDescriptionRequired" : false,
+      "name" : "Subgenre 1"
+    }, {
+      "id" : 22,
+      "isDescriptionRequired" : false,
+      "name" : "Subgenre 2"
+    }, {
+      "id" : 23,
+      "isDescriptionRequired" : false,
+      "name" : "Subgenre 3"
+    } ]
+  }, {
+    "id" : 5,
+    "name" : "Main Genre 1",
+    "subgenres" : [ null, {
+      "books" : [ {
+        "author" : "Gregory Pievski",
+        "date" : "2020-10-03T21:00:00.000Z",
+        "description" : "sdfsdf",
+        "edition" : "sdfsdf",
+        "format" : "A",
+        "id" : 2,
+        "isbn" : "reterter",
+        "language" : "sdfsdf",
+        "pages" : 444,
+        "publisher" : "sdsdgdsgsdgsd",
+        "title" : "Labrary 1"
+      }, {
+        "author" : "Alan E.P.",
+        "date" : "2020-09-16T21:00:00.000Z",
+        "description" : "qweqw ertert tyutyut fghfghf",
+        "edition" : "Litaro",
+        "format" : "BA",
+        "id" : 3,
+        "isbn" : "Estoriar",
+        "language" : "Hebr",
+        "pages" : 123,
+        "publisher" : "Gordoniar",
+        "title" : "Mansandra"
+      } ],
+      "id" : 25,
+      "isDescriptionRequired" : true,
+      "name" : "Gregory Pievski"
+    }, {
+      "id" : 26,
+      "isDescriptionRequired" : false,
+      "name" : "Subgenre"
+    }, {
+      "books" : [ {
+        "author" : "Gregory Pievski",
+        "date" : "2020-05-04T21:00:00.000Z",
+        "description" : "fghfg fgh fghf fhgh fghfgh fghfgh",
+        "edition" : "Gert",
+        "format" : "DC",
+        "id" : 1,
+        "isbn" : "Estoria",
+        "language" : "Eng",
+        "pages" : 111,
+        "publisher" : "Gordoniar",
+        "title" : "Angular 8"
+      } ],
+      "id" : 27,
+      "isDescriptionRequired" : true,
+      "name" : "Subgenre 2"
+    } ]
+  } ]
+}
